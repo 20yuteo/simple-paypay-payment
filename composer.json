@@ -1,0 +1,22 @@
+{
+    "name": "arakakitatsuki/simple-paypay-payment",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^7.3|^8.0",
+        "laravel/framework": "^8.12",
+        "paypayopa/php-sdk": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "arakakitatsuki\\SimplePayPayPayment\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "arakakitatsuki\\SimplePayPayPayment\\ServiceProvider"
+            ]
+        }
+    }
+}
