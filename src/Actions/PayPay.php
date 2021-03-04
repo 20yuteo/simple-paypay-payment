@@ -69,12 +69,11 @@ class PayPay
             "currency" => "JPY"
         ];
         $CQCPayload->setAmount($amount);
-        // 支払いがウェブブラウザで発生している場合は WEB_LINK になります。
+
         $CQCPayload->setRedirectType('WEB_LINK');
-        // 支払い後のリダイレクト先
+
         $CQCPayload->setRedirectUrl(config('pay_pay.redirect_url'));
 
-        // QRコードを生成
         return self::createQrCode($CQCPayload);
     }
 
