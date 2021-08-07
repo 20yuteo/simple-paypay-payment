@@ -23,16 +23,16 @@ class PayPay
         ],config('pay_pay.execution_environment'));
         return self::$client;
     }
-    
+
     /**
      * return merchant payment id
      *
      * @return \String
      */
     public static function getMerchantPaymentId(){
-        return (string) rand(100000000000000000, 999999999999999999);
+        return uniqid('', true);
     }
-    
+
     /**
      * remember merchant payment id
      *
