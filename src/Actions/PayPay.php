@@ -4,7 +4,7 @@ namespace arakakitatsuki\SimplePayPayPayment\Actions;
 use PayPay\OpenPaymentAPI\Client;
 use PayPay\OpenPaymentAPI\Models\CreateQrCodePayload;
 
-class PayPay
+class PayPay implements PayPayInterface
 {
 
     protected $client;

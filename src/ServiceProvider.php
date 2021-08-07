@@ -18,6 +18,11 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
     // }
     public function boot()
     {
+        $this->app->bind(
+            \arakakitatsuki\SimplePayPayPayment\Actions\PayPayInterface::class,
+            \arakakitatsuki\SimplePayPayPayment\Actions\PayPay::class,
+        );
+
         $this->publishes([$this->configPath() => config_path('pay_pay.php')], 'config');
     }
 
